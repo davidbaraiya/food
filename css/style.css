@@ -1,0 +1,529 @@
+@font-face {
+    font-family: heading-font;
+    src: url(../font/heading-font.ttf);
+}
+@font-face {
+    font-family: sub-heading;
+    src: url(../font/Roboto_Condensed/RobotoCondensed-Regular.ttf);
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: sub-heading;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+
+}
+
+/* .....srollbar....  */
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    background-color:rgb(245, 181, 42);
+    border-radius: 10px;
+}
+
+ /* COLOR VARABLE */
+ :root{
+    --primary-color:#3d2514;
+    --red-color:#ca1c1c;
+   }
+    
+/* COSTOM CSS CLASSES */
+ .mybutton{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Myriad Pro";
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    background-color: var(--red-color);
+    transition: all 0.3s ease-in-out;
+ }
+ .mybutton:hover{
+     color: #fff;
+     box-shadow: 1px 1px 3px 2px rgba(255, 56, 56, 0.3);
+ }
+.text-shadow{
+    text-shadow: 0px 5px 5px rgba(255,255,255,0.5);
+}
+
+h1,h2{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--primary-color);
+    font-family: heading-font;
+}
+
+h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family:  sub-heading;
+}
+
+ p{
+     font-size: 1.1em;
+     color: var(--primary-color);
+     letter-spacing: -1px;
+ }
+
+ /* header  strat */
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-vector{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 21px;
+}
+.navbar-brand img{
+    width: 300px;
+}
+.nav-item a{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-color) !important;
+    margin-left: 8px;
+    transition: 0.3s ease-in-out;
+    padding: 5px 10px;
+}
+.nav-item a:hover, .nav-item .active{
+    background-color: #241206 !important;
+    color: #fff !important;
+    border-radius: 5px;
+}
+.navbar-toggler{
+    padding: 8px 8px;
+}
+.navbar-toggler:hover{
+    outline: none;
+}
+.active-nav{
+    background-color: #ffc045;
+    color: #fff;
+}
+
+
+/* heading text  */
+.header-text{
+    margin: 7rem 3em;
+}
+.header-text h1{
+    font-size: 6.5rem;
+}
+.header-text p{
+    border: 2px dashed var(--primary-color);
+    padding: 6px 15px;
+    display: inline-block;
+}
+/* header  end  */
+ 
+/* second section start  */
+.wrapper{
+    width: 100%;
+    height: 80vh;
+}
+.second-section{
+    margin-bottom: 5.5rem;
+}
+.main-div{
+    margin-top: 100px;
+    color: #fff;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    
+}
+.main-div .first-div,
+.main-div .second-div,
+.main-div .third-div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+}
+.main-div .first-div{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    background-image: url(../img/burger4.JPG);
+
+}
+.main-div .second-div{
+    background-image: url(../img/burger5.JPG);
+}
+.main-div .third-div{
+    background-image: url(../img/burger6.JPG);
+}
+.main-div p{
+    font-size: 20px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+}
+.main-div h6{
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+/* second section end  */
+
+
+/* buger card section start  */
+.third-section{
+    max-width: 1320px;
+    margin-bottom: 7rem;
+}
+.myButton  a{
+    text-decoration: none;
+    font-size: 32px;
+    padding: 5px 25px;
+    background-color: #ffc045;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.myButton h1{
+    font-size: 3.26rem;
+}  
+.myButton p{
+    font-size: 1.2rem;
+    padding: 0 7rem;
+}  
+.burger-card div{
+    position: relative;
+}
+.burger-card div::after{ 
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 17%;
+    width: 70%;
+    height: 5%;
+    background-image: url(../img/shadow.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(7px);
+}
+/* buger card section end  */
+
+/* slider start  */
+.carosel-div h6{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -1px;    
+}
+.carosel-div p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    word-spacing: 2px;
+    margin: 0%;
+}
+
+.carousel-indicators{
+    margin-left: 35px;
+}
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff7b00 !important;
+}
+
+/* slider end  */
+
+
+/* form start  */
+.myform{
+    width: 100%;
+    height: 80vh;
+    position: relative !important;
+    overflow-x: hidden;
+}
+form{
+    margin-top: 5rem;
+}
+.myform .container{
+    max-width: 650px;
+}
+.myform h1{
+    letter-spacing: 0.5rem;
+}
+#formbtn{
+    width: 100% !important;
+    background-color: var(--red-color);
+    color: #fff;
+    font-family: heading-font;
+    font-weight: 500;
+}
+.myform::placeholder{
+    font-size: 1.1rem;
+    color: #000 !important;
+}
+.extra-img{
+    overflow: hidden;
+}
+.extra-img .burger{
+    position: absolute;
+    width: 150px;
+    top: 5px;
+    left: 20px;
+}
+.extra-img .bottle{
+    position: absolute;
+    width: 120px;
+    top: 31%;
+    left: 14%;
+}
+.extra-img .dish{
+    position: absolute;
+    width: 20rem;
+    bottom: 0;
+    right: -130px;
+}
+
+
+
+/* form end  */
+
+/* footer start */
+footer{
+    margin-top: 50px;
+}
+.footer{
+    background-image: url(../img/footer.JPG);
+    width: 90%;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    position: relative;
+}
+.footer .logo{
+    width: 400px;
+    margin-bottom: 20px;
+}
+.footer p{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+.icons i{
+    font-size: 20px;
+    background-color: #fff;
+    color: #000;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+    cursor: pointer;
+}
+.icon-div{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+}
+.footer-row .right-side{
+    padding-left: 150px;
+}
+
+
+/* footer end */
+
+
+
+
+/* responsive   */
+
+@media (max-width:1130px) {
+  
+    .extra-img{
+        display: none;
+    }
+}
+
+@media (max-width:991px) {
+    .header-text{
+        margin: 5rem 2rem;
+    }
+    .navbar-brand img{
+        width: 200px;
+    }
+    .header-text h1{
+        font-size: 5.5rem;
+    }
+    .header-text p{
+        font-size: 16px;
+    }
+    .navbar-nav{
+        width: 100%;
+        height: fit-content;
+        background-color: #fff;
+        padding: 0;
+        margin: 5px 0;
+    }
+    .nav-item a{
+        margin-left: 0;
+    }
+    .top-vector{
+        justify-content: center;
+    }
+    form{
+        margin-top: 2rem;
+    }
+    .footer .logo{
+        width: 300px;
+    }
+    .icon-div{
+        margin-top: 5rem;
+    }
+    .footer-row .right-side {
+        padding-left: 0;
+    }
+}
+
+@media (max-width:768x) {
+    .header-text h1{
+        font-size: 3.5rem;
+    }
+    .header-text p{
+        font-size: 13px;
+    }
+    .wrapper{
+        height: 100vh;
+    }
+    .main-div{
+        display: block;
+    }
+    .main-div p{
+        font-size: 15px;
+    }
+    .main-div h6{
+        font-size: 26px;
+    }
+    .footer{
+        height: 120vh;
+        width: 100%;
+    }
+    .footer .container{
+        width: 100%;
+    }
+}
+
+
+
+@media ( max-width:548px){
+    .navbar-brand img{
+        width: 200px;
+    }
+    .navbar{
+        padding: 0 20px;
+    }
+    .header-text{
+        margin: 3rem 1.6rem;
+    }
+    .header-text h1{
+        font-size: 5rem;
+    }
+    .header-text p{
+        font-size: 15px;
+    }
+    .top-vector img{
+        width: 50px;
+    }
+    .myButton h1 {
+        font-size: 2.26rem;
+    }
+    .myButton p{
+        padding: 0 1rem !important;
+    } 
+    .burger-card img{
+        width: 70%;
+    }
+    .myButton{
+        margin-top: 5rem;
+    } 
+    .myform {
+        height: fit-content;
+    }
+    .myform h1{
+        letter-spacing: 0;
+        font-size: 1.88rem;
+    }
+    .myform::placeholder{
+        font-size: 0.89rem;
+    }
+    .footer .logo {
+        width: 250px;
+        margin: 0 auto;
+    }
+    .footer p {
+        font-size: .9rem;
+        line-height: 25px;
+        letter-spacing: 0px;
+    }
+    .icon-div {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 429px) {
+    .myButton h1 {
+        font-size: 2rem;
+    }
+    .footer {
+        width: 95%;
+        height: 80vh;
+    }
+
+    .icon-div {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .header-text h1{
+        font-size: 3rem;
+    }
+}
+/* all end  */
